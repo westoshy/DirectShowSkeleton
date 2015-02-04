@@ -1,0 +1,16 @@
+﻿2015/02/04 13:58:19 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\nishimura\Desktop\DirectShowSkeleton\DirectShowSkeleton\DirectShowSkeleton.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Dev\pcl\3rdParty\Qhull\include\ /I"C:\Dev\pcl\3rdParty\VTK\include\vtk-6.1" /I"C:\Dev\pcl\3rdParty\Boost\include\boost-1_57" /I"C:\Dev\pcl\include\pcl-1.7" /IC:\Dev\dxlib\vc /IC:\Dev\ffmpeg\include /IC:\Dev\publiclib\include /IC:\Dev\fftw /IC:\Dev\opencv\build\include /I"C:\Dev\dlib-18.8" /IC:\Dev /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+         To compile qedit.h you must install the DirectX 9 SDK, to obtain the dxtrans.h header.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\nishimura\Desktop\DirectShowSkeleton\Release\DirectShowSkeleton.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Dev\pcl\3rdParty\Boost\lib /LIBPATH:C:\Dev\pcl\3rdParty\VTK\lib /LIBPATH:C:\Dev\pcl\lib /LIBPATH:C:\Dev\dxlib\vc /LIBPATH:C:\Dev\publiclib\lib /LIBPATH:C:\Dev\fftw /LIBPATH:C:\Dev\opencv\build\x86\vc12\lib /LIBPATH:C:\Dev\ffmpeg\lib io.lib cv.lib avcodec.lib avformat.lib swscale.lib avutil.lib postproc.lib avfilter.lib opencv_calib3d249.lib opencv_contrib249.lib opencv_core249.lib opencv_features2d249.lib opencv_highgui249.lib opencv_imgproc249.lib opencv_objdetect249.lib opencv_video249.lib opencv_videostab249.lib opencv_nonfree249.lib opencv_legacy249.lib pcl_common_release.lib pcl_features_release.lib pcl_filters_release.lib pcl_io_ply_release.lib pcl_io_release.lib pcl_kdtree_release.lib pcl_keypoints_release.lib pcl_octree_release.lib pcl_outofcore_release.lib pcl_people_release.lib pcl_recognition_release.lib pcl_registration_release.lib pcl_sample_consensus_release.lib pcl_search_release.lib pcl_segmentation_release.lib pcl_surface_release.lib pcl_tracking_release.lib pcl_visualization_release.lib Gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\nishimura\Desktop\DirectShowSkeleton\Release\DirectShowSkeleton.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\nishimura\Desktop\DirectShowSkeleton\Release\DirectShowSkeleton.lib" /MACHINE:X86 /SAFESEH Release\main.obj
+         コード生成しています。
+         コード生成が終了しました。
+         DirectShowSkeleton.vcxproj -> C:\Users\nishimura\Desktop\DirectShowSkeleton\Release\DirectShowSkeleton.exe
+     1>プロジェクト "C:\Users\nishimura\Desktop\DirectShowSkeleton\DirectShowSkeleton\DirectShowSkeleton.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:01.28
