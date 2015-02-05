@@ -1,43 +1,46 @@
-#include <iostream>
+#include <stdio.h>
 #include <dshow.h>
-//#pragma include_alias( "dxtrans.h", "qedit.h" )
-//#define __IDxtCompositor_INTERFACE_DEFINED__
-//#define __IDxtAlphaSetter_INTERFACE_DEFINED__
-//#define __IDxtJpeg_INTERFACE_DEFINED__
-//#define __IDxtKey_INTERFACE_DEFINED__
-#include <qedit.h>
 
 #pragma comment(lib, "strmiids.lib")
 
-int main(void)
+#define	FILENAME L"sample.avih"
+
+int main()
 {
+  IGraphBuilder *pGraphBuilder;
+  IMediaControl *pMediaControl;
+
+  // COMを初期化
   CoInitialize(NULL);
 
-  // Filter Graph
-  IGraphBuilder *pGraph = NULL;
-  CoCreateInstance(CLSID_FilterGraph, NULL, CLSCTX_INPROC_SERVER,
-    IID_IGraphBuilder, (void**)&pGraph);
+  // FilterGraphを生成
+  CoCreateInstance(CLSID_FilterGraph,
+    NULL,
+    CLSCTX_INPROC,
+    IID_IGraphBuilder,
+    (LPVOID *)&pGraphBuilder);
 
-  IMediaControl *pMediaControl;
-  IMediaEvent *pEvent;
+  // MediaControlインターフェース取得
+  pGraphBuilder->QueryInterface(IID_IMediaControl,
+    (LPVOID *)&pMediaControl);
 
-  pGraph->QueryInterface(IID_IMediaControl, (void**)&pMediaControl);
-  pGraph->QueryInterface(IID_IMediaEvent, (void**)&pEvent);
+  // Graphを生成
+  pMediaControl->RenderFile(FILENAME);
 
-  // create graph
-  pGraph->RenderFile(L"sample.mp4", NULL);
-
-  // run graph
+  // 再生開始
   pMediaControl->Run();
 
-  // wait finish
-  long evCode;
-  pEvent->WaitForCompletion(INFINITE, &evCode);
+  // 再生中にプログラムが終わってしまわないように
+  MessageBox(NULL,
+    L"Block Execution",
+    L"Block",
+    MB_OK);
 
-  // clean up
+  // 資源を解放
   pMediaControl->Release();
-  pEvent->Release();
-  pGraph->Release();
+  pGraphBuilder->Release();
+
+  // COM終了
   CoUninitialize();
 
   return 0;
